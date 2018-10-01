@@ -1,0 +1,42 @@
+en:
+  routes:
+    ecm_galleries_engine: pictures
+    picture_galleries: galleries
+  activerecord:
+    models:
+      ecm/galleries/picture_detail:
+        one: Picture detail
+        other: Picture details
+      ecm/galleries/picture_gallery:
+        one: Gallery
+        other: Galleries
+    attributes:
+      ecm/galleries/picture_gallery:
+        id: ID
+        name: Name
+        description: Description
+        picture_details_count: Pictures
+        published: Published
+        published_at: Published at
+        created_at: Created at 
+        updated_at: Updated at
+      ecm/galleries/picture_detail:
+        id: ID
+        picture_gallery: Gallery
+        picture_gallery_id: Gallery
+        asset: File
+        asset_id: File
+        title: Title
+        description: Description
+        position: Position
+        published: Published
+        published_at: Published at
+        created_at: Created at 
+        updated_at: Updated at
+  ecm:
+    galleries:
+      picture_galleries:
+        index:
+          show: Show
+        show:
+          back: Back

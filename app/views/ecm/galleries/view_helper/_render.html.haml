@@ -1,0 +1,12 @@
+- if resource.nil?
+- else
+  .row
+    - resource.picture_details.each do |picture_detail|
+      .col-lg-3.d-flex.align-items-stretch.mb-4
+        = bootstrap_card(image_options: { src: main_app.url_for(picture_detail.asset.variant(variant_options))}, additional_css_classes: 'text-center border-0' ) do
+          - if show_details
+            .card-body
+              %h5.card-title
+                = picture_detail.title
+              %p.card-text
+                = picture_detail.description
