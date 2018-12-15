@@ -1,5 +1,5 @@
 module Ecm::Galleries
-  class ApplicationResourcesController < Ecm::Blog::Configuration.base_controller.constantize
+  class ApplicationResourcesController < Ecm::Galleries::Configuration.base_controller.constantize
     include ::ResourcesController::RestActions
     include ::ResourcesController::Resources
     include ::ResourcesController::RestResourceUrls
