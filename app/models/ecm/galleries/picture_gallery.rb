@@ -12,7 +12,7 @@ module Ecm::Galleries
       extend ActiveSupport::Concern
 
       included do
-        has_many :picture_details, dependent: :destroy
+        has_many :picture_details, -> { order(position: :asc) }, inverse_of: :picture_gallery, dependent: :destroy
         before_validation :cleanup_orphaned_picture_details
         before_validation :ensure_picture_details
       end

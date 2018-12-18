@@ -1,5 +1,10 @@
 module Ecm
   module Galleries
+    # Usage:
+    #
+    #     # app/views/home/index.html.haml
+    #     = ecm_galleries_helper(self).render(name: 'main', variant_options: { combine_options: { resize: "255x255^", extent: "255x255", gravity: "center"} }, show_details: false)
+    #
     class ViewHelper
       def initialize(context)
         @context = context
