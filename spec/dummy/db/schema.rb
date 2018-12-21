@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_01_100352) do
+ActiveRecord::Schema.define(version: 2018_12_20_235640) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -34,6 +34,25 @@ ActiveRecord::Schema.define(version: 2018_03_01_100352) do
   end
 
   create_table "ecm_galleries_collections", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ecm_galleries_picture_details", force: :cascade do |t|
+    t.integer "picture_gallery_id"
+    t.integer "asset_id"
+    t.string "title"
+    t.text "description"
+    t.integer "position"
+    t.datetime "published_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ecm_galleries_picture_galleries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "published_at"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

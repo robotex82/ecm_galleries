@@ -49,5 +49,15 @@ module Ecm::Galleries
     def assets_count
       assets.count
     end
+
+    module DisplayCodesConcern
+      extend ActiveSupport::Concern
+
+      def display_code_for_erb
+        "<%= galleries_helper(self).render(name: '#{name}') %>"
+      end
+    end
+
+    include DisplayCodesConcern
   end
 end

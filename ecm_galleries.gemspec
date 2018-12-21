@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "acts_as_list"
   s.add_dependency "acts_as_published"
   s.add_dependency "route_translator"
-  s.add_dependency "rails-add_ons"
+  s.add_dependency "rao-resources_controller", '>= 0.0.3.pre'
+  s.add_dependency "rao-view_helper", '>= 0.0.3.pre'
   s.add_dependency "twitter-bootstrap-components-rails"
 
   s.add_development_dependency "sqlite3"

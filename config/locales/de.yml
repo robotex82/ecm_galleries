@@ -16,6 +16,7 @@ de:
         name: Name
         description: Beschreibung
         picture_details_count: Bilder
+        preview: Vorschau
         published: Veröffentlicht
         published_at: Veröffentlicht am
         created_at: Erstellt am

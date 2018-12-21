@@ -1,18 +1,11 @@
 module Ecm::Galleries
   class ApplicationResourcesController < Ecm::Galleries::Configuration.base_controller.constantize
-    include ::ResourcesController::RestActions
-    include ::ResourcesController::Resources
-    include ::ResourcesController::RestResourceUrls
-    include ::ResourcesController::ResourceInflections
-    include ::ResourcesController::LocationHistory
-    include ::Controller::QueryConditions
+    include Rao::ResourcesController::RestActionsConcern
+    include Rao::ResourcesController::ResourcesConcern
+    include Rao::ResourcesController::RestResourceUrlsConcern
+    include Rao::ResourcesController::ResourceInflectionsConcern
+    include Rao::ResourcesController::LocationHistoryConcern
 
     helper Twitter::Bootstrap::Components::Rails::V4::ComponentsHelper
-
-    private
-
-    def load_collection_scope
-      add_conditions_from_query(resource_class)
-    end
   end
 end
