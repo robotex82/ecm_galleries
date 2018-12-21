@@ -27,13 +27,7 @@ module Ecm
         show_details    = options.delete(:show_details)
         
         resource = Ecm::Galleries::PictureGallery.where(name: name).first
-        c.render partial: 'ecm/galleries/view_helper/render', locals: { resource: resource, variant_options: variant_options, show_details: show_details }
-      end
-
-      private
-
-      def c
-        @context
+        c.render partial: 'ecm/galleries/galleries_helper/render', locals: { resource: resource, variant_options: variant_options, show_details: show_details }
       end
     end
   end

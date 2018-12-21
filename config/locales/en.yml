@@ -15,6 +15,7 @@ en:
         id: ID
         name: Name
         description: Description
+        display_code_for_erb: Display code (erb)
         picture_details_count: Pictures
         preview: Preview
         published: Published
@@ -23,15 +24,16 @@ en:
         updated_at: Updated at
       ecm/galleries/picture_detail:
         id: ID
-        picture_gallery: Gallery
-        picture_gallery_id: Gallery
-        asset: File
         asset_id: File
-        title: Title
+        asset: File
         description: Description
+        display_code_for_erb: Display code (erb)
+        picture_gallery_id: Gallery
+        picture_gallery: Gallery
         position: Position
-        published: Published
         published_at: Published at
+        published: Published
+        title: Title
         created_at: Created at 
         updated_at: Updated at
   ecm:
