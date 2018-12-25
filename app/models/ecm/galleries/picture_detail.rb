@@ -7,6 +7,10 @@ module Ecm::Galleries
 
     acts_as_list scope: :picture_gallery
 
+    def human
+      title || id
+    end
+
     module DisplayCodesConcern
       extend ActiveSupport::Concern
 

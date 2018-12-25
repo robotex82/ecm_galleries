@@ -13,13 +13,15 @@ de:
     attributes:
       ecm/galleries/picture_gallery:
         id: ID
-        name: Name
+        append_assets: Bilder hinzufügen
         description: Beschreibung
         display_code_for_erb: Anzeigecode (erb)
+        name: Name
+        overwrite_assets: Bilder ersetzen
         picture_details_count: Bilder
         preview: Vorschau
-        published: Veröffentlicht
         published_at: Veröffentlicht am
+        published: Veröffentlicht
         created_at: Erstellt am
         updated_at: Aktualisiert am
       ecm/galleries/picture_detail:
@@ -31,6 +33,7 @@ de:
         picture_gallery_id: Galerie
         picture_gallery: Galerie
         position: Position
+        preview: Vorschau
         published_at: Veröffentlicht am
         published: Veröffentlicht
         title: Titel

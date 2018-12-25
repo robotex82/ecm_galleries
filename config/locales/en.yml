@@ -31,6 +31,7 @@ en:
         picture_gallery_id: Gallery
         picture_gallery: Gallery
         position: Position
+        preview: Preview
         published_at: Published at
         published: Published
         title: Title

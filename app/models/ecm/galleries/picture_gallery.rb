@@ -12,9 +12,27 @@ module Ecm::Galleries
       extend ActiveSupport::Concern
 
       included do
-        has_many :picture_details, -> { order(position: :asc) }, inverse_of: :picture_gallery, dependent: :destroy
+        has_many :picture_details, -> { order(position: :asc) }, inverse_of: :picture_gallery, dependent: :destroy, autosave: true
         before_validation :cleanup_orphaned_picture_details
         before_validation :ensure_picture_details
+      end
+
+      def append_assets
+        assets
+      end
+
+      def append_assets=(assets)
+        self.assets = assets
+      end
+
+      def overwrite_assets
+        assets
+      end
+
+      def overwrite_assets=(assets)
+        return if assets.nil? || assets.empty?
+        self.picture_details.map { |pd| pd.mark_for_destruction }
+        self.assets = assets
       end
 
       def picture_details_count
@@ -36,11 +54,12 @@ module Ecm::Galleries
       end
 
       def build_picture_detail_for_asset(asset)
-        picture_details.build(asset: asset)
+        picture_details.build(asset: asset, published: published)
       end
     end
 
     include PictureDetails
+
 
     def human
       name
