@@ -16,7 +16,7 @@ module Ecm
     #
     # You can pass the image_tag_only option to render just the <img>-tag without a bootstrap card.
     #
-    class PicturesHelper < ViewHelper::Base
+    class PicturesHelper < Rao::ViewHelper::Base
       def initialize(context)
         @context = context
       end

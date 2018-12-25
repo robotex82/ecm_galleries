@@ -14,7 +14,7 @@ module Ecm
     # Default options are taken from Ecm::Galleries::Configuration.galleries_helper_render_default_options.
     # You can set this option in the initializer.
     #
-    class GalleriesHelper < ViewHelper::Base
+    class GalleriesHelper < Rao::ViewHelper::Base
       def initialize(context)
         @context = context
       end
