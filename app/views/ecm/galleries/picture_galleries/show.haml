@@ -1,6 +1,6 @@
 %h1= @resource.name
 
-%div{ class: dom_id(@resource), class: dom_class(@resource) }
+%div{ id: dom_id(@resource), class: dom_class(@resource) }
   .row
     - @resource.picture_details.each do |picture_detail|
       .col-lg-4.d-flex.align-items-stretch
