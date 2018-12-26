@@ -3,8 +3,8 @@
 .row
   - @collection.each do |picture_gallery|
     .col-4
-      - image_options = if picture_gallery.assets.any?
-        - { src: main_app.url_for(picture_gallery.assets.first) }
+      - image_options = if picture_gallery.picture_details.first.try(:asset).present?
+        - { src: main_app.url_for(picture_gallery.picture_details.first.asset.variant(Ecm::Galleries::Configuration.thumbnail_variant_options)) }
       - else
         - {}
       = bootstrap_card(image_options: image_options, additional_css_classes: 'text-center border-0') do
